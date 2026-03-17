@@ -17,6 +17,37 @@ The following table provides the ONNX model files, their configurations, and dir
 
 ---
 
+# SUTrack ONNX Video Inference Tool (video_track_onnx.py) User Guide
+
+`video_track_onnx.py` is a real-time object tracking inference script based on ONNX Runtime. It supports the **SUTrack** series (Tiny, Base, Large) and automatically adapts the **Search Size** and **Template Size** based on the provided model filename.
+
+## 1. Prerequisites
+
+Ensure your Python (>=3.8) environment has the following core dependencies installed:
+
+```bash
+pip install onnxruntime opencv-python numpy argparse
+```
+
+## 2. Quick Start
+Run the following command in your terminal to start tracking. Once the program launches, use your mouse to select the target in the first frame and press Enter to begin.
+```bash
+python video_track_onnx.py --model ./sutrack_l384.onnx --video ./data/test.mp4
+```
+
+## 3. Operation Workflow & Shortcuts
+* Select Target (ROI): The program will pause on the first frame. Click and drag your left mouse button to draw a bounding box around the target.
+* Confirm Selection: Press Enter or Space to confirm the ROI and start real-time tracking.
+* Reset Selection: If you made a mistake, press C to cancel the current selection and re-draw.
+* Exit Program: During tracking, press Q or ESC to close the window and exit.
+   
+## 3.操作流程与快捷键 (中文)
+* 框选目标 (ROI)：程序启动后会暂停在第一帧。使用鼠标左键拖动框选目标。
+* 确认选择：按下 回车 (Enter) 或 空格 (Space) 键确认，程序开始实时跟踪。
+* 重新选择：如果框选错误，按下 C 键取消当前选择并重新框选。
+* 退出程序：在跟踪过程中，按下 Q 键或 ESC 键可直接关闭窗口并退出。
+
+
 ## Origins & Weights
 
 - **Original PyTorch Implementation:** [chenxin-dlut/SUTrack](https://github.com/chenxin-dlut/SUTrack)
