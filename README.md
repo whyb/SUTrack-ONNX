@@ -21,6 +21,8 @@ The following table provides the ONNX model files, their configurations, and dir
 
 `video_track_onnx.py` is a real-time object tracking inference script based on ONNX Runtime. It supports the **SUTrack** series (Tiny, Base, Large) and automatically adapts the **Search Size** and **Template Size** based on the provided model filename.
 
+![test result](https://raw.githubusercontent.com/whyb/SUTrack-ONNX/main/SUTrack_onnx_demo.gif)
+
 ## 1. Prerequisites
 
 Ensure your Python (>=3.8) environment has the following core dependencies installed:
