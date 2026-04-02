@@ -17,11 +17,16 @@ The following table provides the ONNX model files, their configurations, and dir
 
 ---
 
-# SUTrack ONNX Video Inference Tool (video_track_onnx.py) User Guide
+# SUTrack ONNX Video Inference Tool User Guide
 
 `video_track_onnx.py` is a real-time object tracking inference script based on ONNX Runtime. It supports the **SUTrack** series (Tiny, Base, Large) and automatically adapts the **Search Size** and **Template Size** based on the provided model filename.
 
 ![test result](https://raw.githubusercontent.com/whyb/SUTrack-ONNX/main/SUTrack_onnx_demo.gif)
+
+
+`video_track_onnx.py` is an ONNX-based visual servoing and stabilization script that performs real-time target centering and orientation. By leveraging SUTrack’s deep features, it dynamically calculates an Affine Transformation Matrix to compensate for camera motion, ensuring the tracked object remains at the geometric center of the frame with a temporally smoothed zoom to maintain a consistent visual scale.
+
+![test result](https://raw.githubusercontent.com/whyb/SUTrack-ONNX/main/SUTrack_lock_object.gif)
 
 ## 1. Prerequisites
 
